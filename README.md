@@ -1,6 +1,8 @@
 # CryptoPrices
 by Ben Mangold
 
+[CryptoPrices Loading on Fast 3G](https://www.dropbox.com/s/dn4clj27iq3xp1c/CrytoPrice_12-6.gif?dl=0)
+
 A Plot of Crypto Daily BTC Prices
 
 React, Chart.js, Express
