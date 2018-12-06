@@ -1,10 +1,13 @@
-/* server data api */
+/* exports api routes factory, uses coin desk by default */
+
 const { COIN_DESK_ENUM, CRYPTO_COMPARE_ENUM, DEFAULT_API } = require('../../config.js')
 
 const express = require('express')
+const {logger} = require('../logger')
 const router = express.Router()
 
 const CoinDeskRouter = require('./CoinDeskAPI').router
+const CryptoCompareRouter = require('./CryptoCompareAPI').router
 
 /* api root */
 router.get('/', function (req, res) {
@@ -13,10 +16,11 @@ router.get('/', function (req, res) {
 
 function apiRouter(api = DEFAULT_API) {
   if (api === COIN_DESK_ENUM) {
-    console.log('coin desk api selected')
+    logger.info('coin desk api selected')
     return router.use(CoinDeskRouter)
   } else if (api === CRYPTO_COMPARE_ENUM) {
-    console.log('crypto compare api selected')
+    logger.info('crypto compare api selected')
+    return router.use(CryptoCompareRouter)
   }
 }
 

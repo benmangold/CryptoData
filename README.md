@@ -27,6 +27,8 @@ There is an API implemented to pull BTC price and history accessible from
 
 `/api/btc/history`
 
+`/api/eth/history`
+
 It currently uses the CoinDesk api.  Thanks CoinDesk!
 
 ## LineChart Component Props and Usage

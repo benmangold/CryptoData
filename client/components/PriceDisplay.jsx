@@ -1,3 +1,5 @@
+/* Header with current price */
+
 import React from 'react';
 
 export default ({ label, price }) => {

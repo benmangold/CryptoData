@@ -1,4 +1,4 @@
-/* routes to coindesk btc data api */
+/* routes to coindesk api - only btc */
 
 const { API_BTC_HISTORY, API_BTC_PRICE, CD_BTC_PRICE, CD_BTC_HISTORY } = require('../../../config.js')
 const { logger } = require('../../logger')
@@ -21,7 +21,6 @@ router.get(API_BTC_PRICE, function (req, res) {
 
 router.get(API_BTC_HISTORY, function (req, res) {
   logger.info('CoinDesk API Get BTC History')
-
   axios.get(CD_BTC_HISTORY)
   .then(({data}) => {
     logger.info(data)
