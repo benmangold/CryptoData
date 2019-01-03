@@ -35,7 +35,7 @@ It currently uses the CoinDesk api for btc and the Crypto Compare api for eth.
 
 ## LineChart Component Props and Usage
 
-```
+```javascript
   <LineChart 
     waitForUpdate={false}
     id='lineChart' 
